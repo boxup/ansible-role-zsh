@@ -12,3 +12,4 @@ zsh_zprezto_copy_files:
   - zpreztorc
   - zprofile
   - zshenv
+zsh_rc_dir: ~/.zshrc.d

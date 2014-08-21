@@ -13,6 +13,6 @@ fi
 
 # Customize to your needs...
 
-if [ -d ~/.zshrc.d ]; then
-  source ~/.zshrc.d/*
+if [ -d {{ zsh_rc_dir }} ]; then
+  source {{ zsh_rc_dir }}/*
 fi

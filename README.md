@@ -30,6 +30,8 @@ Role Variables
     - the install target directory of zprezto
 - zsh_zprezto_copy_files: [zlogin, zlogout, zpreztorc, zprofile, zshenv]
     - zprezto files to copy
+- zsh_rc_dir: ~/.zshrc.d
+    - the directory where to put additional zsh config files
 
 Dependencies
 ------------

@@ -8,3 +8,7 @@
 
 - include: zprezto.yml
   when: zsh_zprezto_setup|bool
+
+- template: src=zshrc.j2 dest=~/.zshrc
+
+- file: name={{ zsh_rc_dir }} state=directory
