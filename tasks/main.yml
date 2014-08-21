@@ -1,0 +1,7 @@
+---
+# tasks file for osx-zsh
+- include: osx-homebrew.yml
+  when: ansible_os_family == "Darwin"
+
+- include: osx-login-shell.yml
+  when: ansible_os_family == "Darwin" and zsh_set_login_shell|bool

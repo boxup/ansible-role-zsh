@@ -1,0 +1,4 @@
+---
+# defaults file for osx-zsh
+zsh_install_options: disable-etcdir
+zsh_set_login_shell: yes
