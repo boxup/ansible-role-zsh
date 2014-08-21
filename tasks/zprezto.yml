@@ -2,5 +2,5 @@
 # tasks file for hnakamur.zsh-zprezto
 - git: repo="{{ zsh_zprezto_git_url }}" dest="{{ zsh_zprezto_work_dir }}"
 
-- file: src="{{ zsh_zprezto_work_dir }}/runcoms/{{ item }}" dest="~/.{{ item }}" state=link
-  with_items: zsh_zprezto_links
+- copy: src="{{ zsh_zprezto_work_dir }}/runcoms/{{ item }}" dest="~/.{{ item }}"
+  with_items: zsh_zprezto_copy_files
