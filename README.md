@@ -11,12 +11,17 @@ None.
 Role Variables
 --------------
 
-- epel_base_url: The base url of the EPEL repository. The default value is http://ftp.iij.ad.jp/pub/linux/fedora/epel
-
 - zsh_install_options: disable-etcdir
     - install options for homebrew zsh
 - zsh_set_login_shell: yes
     - whether or not to set zsh as the login shell
+
+- zsh_zprezto_setup: yes
+    - whether or not to setup zprezto
+- zsh_zprezto_git_url: git://github.com/sorin-ionescu/prezto.git
+    - the url of zprezto git repository
+- zsh_zprezto_work_dir: ~/.zprezto
+    - the install target directory of zprezto
 
 Dependencies
 ------------

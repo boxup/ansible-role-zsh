@@ -5,3 +5,6 @@
 
 - include: osx-login-shell.yml
   when: ansible_os_family == "Darwin" and zsh_set_login_shell|bool
+
+- include: zprezto.yml
+  when: zsh_zprezto_setup|bool

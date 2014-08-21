@@ -1,0 +1,3 @@
+---
+# tasks file for hnakamur.zsh-zprezto
+- git: repo="{{ zsh_zprezto_git_url }}" dest="{{ zsh_zprezto_work_dir }}"
