@@ -3,6 +3,7 @@
 - shell: dscl . read ~ UserShell | awk '{print $2}'
   sudo: no
   register: zsh_current_login_shell
+  changed_when: false
 
 - lineinfile: dest=/etc/shells line=/usr/local/bin/zsh state=present owner=root group=wheel mode=0644
   sudo: yes
@@ -11,6 +12,7 @@
 - shell: id -un
   sudo: no
   register: zsh_login_id
+  changed_when: false
   when: zsh_current_login_shell.stdout != "/usr/local/bin/zsh"
 
 - shell: chsh -s /usr/local/bin/zsh "{{ zsh_login_id.stdout }}"
