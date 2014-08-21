@@ -8,7 +8,3 @@
 
 - include: zprezto.yml
   when: zsh_zprezto_setup|bool
-
-- file: name=~/.zshrc.d state=directory
-
-- lineinfile: dest=~/.zshrc line='. ~/.zshrc.d/*' state=present

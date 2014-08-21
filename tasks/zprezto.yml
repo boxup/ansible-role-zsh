@@ -4,3 +4,7 @@
 
 - copy: src="{{ zsh_zprezto_work_dir }}/runcoms/{{ item }}" dest="~/.{{ item }}"
   with_items: zsh_zprezto_copy_files
+
+- template: src=zshrc.j2 dest=~/.zshrc
+
+- file: name=~/.zshrc.d state=directory

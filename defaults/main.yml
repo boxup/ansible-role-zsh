@@ -9,6 +9,6 @@ zsh_zprezto_work_dir: ~/.zprezto
 zsh_zprezto_copy_files:
   - zlogin
   - zlogout
+  - zpreztorc
   - zprofile
   - zshenv
-  - zshrc

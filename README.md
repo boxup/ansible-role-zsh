@@ -28,7 +28,7 @@ Role Variables
     - the url of zprezto git repository
 - zsh_zprezto_work_dir: ~/.zprezto
     - the install target directory of zprezto
-- zsh_zprezto_copy_files: [zlogin, zlogout, zprofile, zshenv, zshrc]
+- zsh_zprezto_copy_files: [zlogin, zlogout, zpreztorc, zprofile, zshenv]
     - zprezto files to copy
 
 Dependencies

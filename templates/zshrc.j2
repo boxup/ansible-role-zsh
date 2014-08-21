@@ -4,6 +4,7 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+# {{ ansible_managed }}
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -12,3 +13,6 @@ fi
 
 # Customize to your needs...
 
+if [ -d ~/.zshrc.d ]; then
+  source ~/.zshrc.d/*
+fi
