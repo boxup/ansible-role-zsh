@@ -1,20 +1,19 @@
 ---
-# tasks file for osx-zsh
+- shell: grep '^/usr/local/bin/zsh$' /etc/shells
+  register: zsh_exists_in_etc_shells
+  changed_when: false
+  failed_when: zsh_exists_in_etc_shells.rc not in [0, 1]
+
+- lineinfile: dest=/etc/shells line=/usr/local/bin/zsh state=present owner=root group=wheel mode=0644
+  sudo: yes
+  when: zsh_exists_in_etc_shells.rc == 1
+
+
 - shell: dscl . read ~ UserShell | awk '{print $2}'
   sudo: no
   register: zsh_current_login_shell
   changed_when: false
 
-- lineinfile: dest=/etc/shells line=/usr/local/bin/zsh state=present owner=root group=wheel mode=0644
-  sudo: yes
-  when: zsh_current_login_shell.stdout != "/usr/local/bin/zsh"
-
-- shell: id -un
-  sudo: no
-  register: zsh_login_id
-  changed_when: false
-  when: zsh_current_login_shell.stdout != "/usr/local/bin/zsh"
-
-- shell: chsh -s /usr/local/bin/zsh "{{ zsh_login_id.stdout }}"
+- shell: chsh -s /usr/local/bin/zsh {{ lookup('env', 'USER') }}
   sudo: no
   when: zsh_current_login_shell.stdout != "/usr/local/bin/zsh"
