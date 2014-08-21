@@ -6,7 +6,13 @@ An Ansible role to install and setup zsh
 Requirements
 ------------
 
-None.
+You need to run ansible-playbook with -K (ask_sudo_pass) option
+in order to add a line '/usr/local/bin/zsh' to /etc/shells on OS X
+
+```
+ansible-playbook -K _your_playbook_.yml
+```
+
 
 Role Variables
 --------------
@@ -22,6 +28,8 @@ Role Variables
     - the url of zprezto git repository
 - zsh_zprezto_work_dir: ~/.zprezto
     - the install target directory of zprezto
+- zsh_zprezto_copy_files: [zlogin, zlogout, zprofile, zshenv, zshrc]
+    - zprezto files to copy
 
 Dependencies
 ------------
