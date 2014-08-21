@@ -18,7 +18,7 @@ Role Variables
 
 - zsh_zprezto_setup: yes
     - whether or not to setup zprezto
-- zsh_zprezto_git_url: git://github.com/sorin-ionescu/prezto.git
+- zsh_zprezto_git_url: https://github.com/sorin-ionescu/prezto.git
     - the url of zprezto git repository
 - zsh_zprezto_work_dir: ~/.zprezto
     - the install target directory of zprezto

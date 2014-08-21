@@ -4,5 +4,5 @@ zsh_install_options: disable-etcdir
 zsh_set_login_shell: yes
 
 zsh_zprezto_setup: yes
-zsh_zprezto_git_url: git://github.com/sorin-ionescu/prezto.git
+zsh_zprezto_git_url: https://github.com/sorin-ionescu/prezto.git
 zsh_zprezto_work_dir: ~/.zprezto
