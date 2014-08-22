@@ -13,6 +13,6 @@ fi
 
 # Customize to your needs...
 
-if [ -d {{ zsh_rc_dir }} ]; then
-  source {{ zsh_rc_dir }}/*
+if [ -d {{ zsh_rc_dir | replace('~', '${HOME}') }} ]; then
+  source {{ zsh_rc_dir | replace('~', '${HOME}') }}/*
 fi
