@@ -13,6 +13,6 @@ fi
 
 # Customize to your needs...
 
-if [ -d {{ zsh_rc_dir | replace('~', '${HOME}') }} ]; then
-  source {{ zsh_rc_dir | replace('~', '${HOME}') }}/*
-fi
+for file in {{ zsh_rc_dir | replace('~', '${HOME}') }}/*; do
+  source "$file"
+done

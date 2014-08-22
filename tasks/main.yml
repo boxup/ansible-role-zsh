@@ -12,3 +12,8 @@
 - template: src=zshrc.j2 dest=~/.zshrc
 
 - file: name={{ zsh_rc_dir }} state=directory
+
+- template: src={{ item }}.j2 dest={{ zsh_rc_dir }}/{{ item }}
+  with_items:
+    - git
+    - vim
